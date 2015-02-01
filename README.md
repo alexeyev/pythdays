@@ -1,4 +1,4 @@
-_The_palest_ink_is_better_than_the_best_memory._
+_The palest ink is better than the best memory._
 
 One can 
 * load one's friends' birthdates, 
