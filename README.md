@@ -4,7 +4,8 @@ One can
 * load one's friends' birthdates, 
 * do necessary stuff using Excel or Calc or whatever,
 * import modified dates as yearly events into one's calendar
-with 2 bloody scripts.
+
+with 2 bloody scripts and some sweat due to the necessity of authorization.
 
 ## load.py
 
@@ -27,8 +28,9 @@ Well, you have to go through some bullshit to succeed.
 * Create your own project via [Google Dev Console](http://console.developers.google.com).
 * Get some keys and ids:
  
+Client ID + client secret
 `APIs & auth / Credentials > OAuth / Create new Client ID / Installed application`
-
+Developer key (aka API key)
 `APIs & auth / Credentials > Public API access / Create new Key`
 
 * [Create a brand new calendar](https://www.google.com/calendar/). You know how to do it.
