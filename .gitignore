@@ -3,3 +3,4 @@ credentials.py
 *.csv
 *.pyc
 .idea/*
+.idea*
