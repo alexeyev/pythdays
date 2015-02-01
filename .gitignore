@@ -1,0 +1,4 @@
+*.dat
+credentials.py
+*.csv
+*.pyc
