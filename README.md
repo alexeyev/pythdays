@@ -1,4 +1,4 @@
-The palest ink is better than the best memory.
+//The palest ink is better than the best memory.//
 
 One can 
 * load one's friends' birthdates, 
@@ -6,7 +6,7 @@ One can
 * import modified dates as yearly events into one's calendar
 with 2 bloody scripts.
 
-# load.py
+## load.py
 
 This is what you may need:
 ```python
@@ -20,31 +20,29 @@ $ python load.py 1
 ```
 and you get `1.csv` with all birthdays one can grab via open API. Enjoy.
 
-# save.py
+## save.py
 
 Well, you have to go through some bullshit to succeed.
 
-1. Create your own project via [Google Dev Console](http://console.developers.google.com).
-2. Get some keys and ids:
+* Create your own project via [Google Dev Console](http://console.developers.google.com).
+* Get some keys and ids:
+ 
  `APIs & auth / Credentials > OAuth / Create new Client ID / Installed application`
+
 `APIs & auth / Credentials > Public API access / Create new Key`
 
-3. [Create a brand new calendar](https://www.google.com/calendar/). You know how to do it.
+* [Create a brand new calendar](https://www.google.com/calendar/). You know how to do it.
 
-4. Fill parameters at `example_credentials.py` config and rename it to `credentials.py`.
+* Fill parameters at `example_credentials.py` config and rename it to `credentials.py`.
 
-5. Install `google-api-python-client`:
+* Install `google-api-python-client`:
 
-Execute whichever you like. Either
-```
-easy_install --upgrade google-api-python-client
-```
-or
+Execute 
 ```
 pip install --upgrade google-api-python-client
 ```
 
-6. I'm not sure if we're done with it, maybe not yet: 
+* I'm not sure if we're done with it, maybe not yet: 
 
 ```python
 import httplib2
@@ -58,7 +56,6 @@ from apiclient.discovery import build
 Either sort it out by yourself or write to me.
 
 
-
 Then say
 ```
 $ python save.py imported_data_of_the_same_format.csv Europe/Moscow
@@ -67,6 +64,6 @@ $ python save.py imported_data_of_the_same_format.csv Europe/Moscow
 Yes, you need a timezone from [IANA TZD](http://en.wikipedia.org/wiki/Category:Tz_database).
 `Europe/Moscow` is used if no value is provided.
 
-# Bugs, improvements
+## Bugs, improvements
 
 In case of trouble of whatever -- feel free to write to me or create a new issue here on GitHub.
