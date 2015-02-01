@@ -1,4 +1,4 @@
-//The palest ink is better than the best memory.//
+_The_palest_ink_is_better_than_the_best_memory._
 
 One can 
 * load one's friends' birthdates, 
@@ -27,7 +27,7 @@ Well, you have to go through some bullshit to succeed.
 * Create your own project via [Google Dev Console](http://console.developers.google.com).
 * Get some keys and ids:
  
- `APIs & auth / Credentials > OAuth / Create new Client ID / Installed application`
+`APIs & auth / Credentials > OAuth / Create new Client ID / Installed application`
 
 `APIs & auth / Credentials > Public API access / Create new Key`
 
