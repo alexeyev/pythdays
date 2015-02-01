@@ -29,8 +29,11 @@ Well, you have to go through some bullshit to succeed.
 * Get some keys and ids:
  
 Client ID + client secret
+
 `APIs & auth / Credentials > OAuth / Create new Client ID / Installed application`
+
 Developer key (aka API key)
+
 `APIs & auth / Credentials > Public API access / Create new Key`
 
 * [Create a brand new calendar](https://www.google.com/calendar/). You know how to do it.
