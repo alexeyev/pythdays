@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+__author__ = "alexeyev"
 
 import sys
 import json
@@ -18,6 +19,7 @@ print "Fetching birthdays for id", my_id, "; results to be stored in", results_f
 
 url_pattern = "https://api.vk.com/method/friends.get?fields=city,bdate&user_id="
 
+
 def fix_bdate(bd):
     if bd == NO_BDATE:
         return NO_BDATE
@@ -28,12 +30,15 @@ def fix_bdate(bd):
         else:
             return bd + ".1648"
 
+
 def json_to_line(o):
     try:
         bdate = str(o['bdate'])
-    except Exception,e:
+    except Exception, e:
         bdate = NO_BDATE
-    return fix_bdate(bdate) + "\t" + "\t".join([str(o['uid']), str(o['user_id']), o['first_name'], o['last_name']]) + "\n"
+    return fix_bdate(bdate) + "\t" + "\t".join(
+        [str(o['uid']), str(o['user_id']), o['first_name'], o['last_name']]) + "\n"
+
 
 with open(results_file_path, "w+") as wfile:
     raw_response = urlopen(url_pattern + my_id).read()

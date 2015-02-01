@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+__author__ = "alexeyev"
 
 import sys
 
@@ -7,8 +8,8 @@ from oauth2client.file import Storage
 from oauth2client.client import OAuth2WebServerFlow
 from oauth2client.tools import run
 
-from credentials import *
 from apiclient.discovery import build
+from credentials import *
 
 
 """
@@ -33,6 +34,7 @@ def handle_bdate(token):
         day = spl[2] + "-" + spl[1] + "-" + spl[0]
         # todo: better date handling
         return day + "T00:00:00.000", day + "T23:59:00.000"
+
 
 if __name__ == '__main__':
 
@@ -87,4 +89,4 @@ if __name__ == '__main__':
                 created_event = service.events().insert(calendarId=calendarId, body=event).execute()
                 print "Resource id:", created_event['id']
             except Exception, e:
-                print "Skipping line: {", line, "} message:",  e
+                print "Skipping line: {", line, "} message:", e

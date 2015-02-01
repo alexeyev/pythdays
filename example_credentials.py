@@ -1,4 +1,5 @@
 # -*- coding:utf-8 -*-
+__author__ = "alexeyev"
 
 # ID on calendar creation
 # aka URL from 'src' in code for calendar embedding

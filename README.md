@@ -24,17 +24,16 @@ and you get `1.csv` with all birthdays one can grab via open API. Enjoy.
 
 Well, you have to go through some bullshit to succeed.
 
-Firstly, create your own project via [Google Dev Console](http://console.developers.google.com).
+1. Create your own project via [Google Dev Console](http://console.developers.google.com).
+2. Get some keys and ids:
+ `APIs & auth / Credentials > OAuth / Create new Client ID / Installed application`
+`APIs & auth / Credentials > Public API access / Create new Key`
 
-Secondly, get some keys and ids:
-## APIS & auth / Credentials > OAuth / Create new Client ID / Installed application
-## APIS & auth / Credentials > Public API access / Create new Key
+3. [Create a brand new calendar](https://www.google.com/calendar/). You know how to do it.
 
-Thirdly, [create a brand new calendar](https://www.google.com/calendar/). You know how to do it.
+4. Fill parameters at `example_credentials.py` config and rename it to `credentials.py`.
 
-Then fill parameters at `example_credentials.py` config and rename it to `credentials.py`.
-
-Yet more stuff to be done:
+5. Install `google-api-python-client`:
 
 Execute whichever you like. Either
 ```
@@ -45,7 +44,7 @@ or
 pip install --upgrade google-api-python-client
 ```
 
-I'm not sure if we're done with it, maybe not yet: 
+6. I'm not sure if we're done with it, maybe not yet: 
 
 ```python
 import httplib2
@@ -56,12 +55,18 @@ from oauth2client.tools import run
 from credentials import *
 from apiclient.discovery import build
 ```
+Either sort it out by yourself or write to me.
+
+
 
 Then say
 ```
 $ python save.py imported_data_of_the_same_format.csv Europe/Moscow
 ```
 
-Yes, a timezone from [IANA TZD](http://en.wikipedia.org/wiki/Category:Tz_database).
+Yes, you need a timezone from [IANA TZD](http://en.wikipedia.org/wiki/Category:Tz_database).
+`Europe/Moscow` is used if no value is provided.
 
-PROFIT!
+# Bugs, improvements
+
+In case of trouble of whatever -- feel free to write to me or create a new issue here on GitHub.
