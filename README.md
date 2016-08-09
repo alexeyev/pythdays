@@ -58,17 +58,12 @@ from oauth2client.tools import run
 from credentials import *
 from apiclient.discovery import build
 ```
-Either sort it out by yourself or write to me.
 
 
-Then say
+Then run
 ```
 $ python save.py imported_data_of_the_same_format.csv Europe/Moscow
 ```
 
 Yes, you need a timezone from [IANA TZD](http://en.wikipedia.org/wiki/Category:Tz_database).
 `Europe/Moscow` is used if no value is provided.
-
-## Bugs, improvements
-
-In case of trouble of whatever -- feel free to write to me or create a new issue here on GitHub.
